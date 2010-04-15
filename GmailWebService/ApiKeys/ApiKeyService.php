@@ -1,5 +1,5 @@
 <?php
-namespace GmailToTwitterService\ApiKeyService;
+namespace MailChirp\GmailToTwitterService\ApiKeyService;
 class Service {
     public function IsRegisteredAPIKey($apiKey) {
         return true;

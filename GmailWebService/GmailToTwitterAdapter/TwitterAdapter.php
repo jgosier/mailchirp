@@ -1,5 +1,5 @@
 <?php
-namespace GmailToTwitterService\GmailToTwitterAdapter;
+namespace MailChirp\GmailToTwitterService\GmailToTwitterAdapter;
 class TwitterAdapter {
     private $username;
     private $password;
