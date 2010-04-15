@@ -6,7 +6,7 @@ class GmailAdapterTest extends \PHPUnit_Framework_TestCase {
         include_once(dirname(__FILE__)."/../../GmailToTwitterAdapter/GmailAdapter.php");
         include_once(dirname(__FILE__)."/../../GmailToTwitterAdapter/Email.php");
         $username = "mrmatthewgriffiths@gmail.com";
-        $password = "hellit";
+        $password = "";
         $adapter = new \GmailToTwitterService\GmailToTwitterAdapter\GmailAdapter($username, $password);
         $emails = $adapter->GetEmails(strtotime("-2 days"), 30);
     }

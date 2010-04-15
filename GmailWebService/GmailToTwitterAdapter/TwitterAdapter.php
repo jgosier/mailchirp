@@ -1,11 +1,27 @@
 <?php
 namespace GmailToTwitterService\GmailToTwitterAdapter;
 class TwitterAdapter {
-    $result = shell_exec('curl -u davidwalshblog:myPass -d "text=Testing a remote direct message via C
-URL&user=fellowTweeter" http://twitter.com/direct_messages/new.xml');
+    private $username;
+    private $password;
 
-    public function SendDirectMessage() {
-        
+    public function __construct($username, $password) {
+        $this->username = $username;
+        $this->password = $password;
+        include_once("Services/Twitter.php");
+    }
+
+    public function SendDirectMessage($to, $message) {
+        try {
+            $service = new \Services_Twitter($this->username, $this->password);
+            $service->direct_messages->new($to, $message);
+            $service->account->end_session();
+        }
+        catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+
+
     }
 }
 ?>
