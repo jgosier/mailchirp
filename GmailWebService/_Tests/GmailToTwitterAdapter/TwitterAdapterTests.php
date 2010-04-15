@@ -7,6 +7,7 @@ class TwitterAdapterTests extends \PHPUnit_Framework_TestCase {
         $username = "mkgriffiths";
         $password = "";
         $adapter = new \GmailToTwitterService\GmailToTwitterAdapter\TwitterAdapter($username, $password);
+        $adapter->SendDirectMessage("jongos", "Wow, I love twitter and this new mailchirp is the tits!");
     }
 }
 ?>
